@@ -1,0 +1,10 @@
+app.factory('mySocket', function(socketFactory) {
+
+    var myIoSocket = io(window.location.origin);
+
+    var socket = socketFactory({
+            ioSocket: myIoSocket
+        })
+        // console.log(socket)
+    return socket;
+})
